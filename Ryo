@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Atención! Virus Detectado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffcccc;
+            color: #ff0000;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 20%;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        p {
+            font-size: 1.5em;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: #ff0000;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Atención! Virus Detectado</h1>
+        <p>Su computadora ha sido infectada con un virus. ¡No cierre esta ventana!</p>
+        <button onclick="startPrank()">Eliminar Virus</button>
+    </div>
+
+    <script>
+        function startPrank() {
+            alert("Eliminando virus...");
+            document.body.style.backgroundColor = "#000000";
+            document.body.style.color = "#ffffff";
+            document.querySelector('h1').innerText = "¡Virus no eliminado!";
+            document.querySelector('p').innerText = "Tu computadora sigue infectada. Llame al soporte técnico.";
+            setTimeout(() => {
+                alert("Esta es solo una broma. ¡Tu computadora está a salvo!");
+                document.body.style.backgroundColor = "#ffcccc";
+                document.body.style.color = "#ff0000";
+                document.querySelector('h1').innerText = "¡Atención! Virus Detectado";
+                document.querySelector('p').innerText = "Su computadora ha sido infectada con un virus. ¡No cierre esta ventana!";
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
